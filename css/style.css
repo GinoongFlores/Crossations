@@ -1,7 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Raleway&display=swap");
+
 * {
+	font-family: "Raleway", sans-serif;
+
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+}
+
+body,
+html {
+	height: 100%;
 }
 
 :root {
@@ -20,30 +29,38 @@
 	--bs-gray: #6c757d;
 }
 
+/* Navbar */
+
 img.img-logo {
 	height: 60px;
 	width: auto;
 }
 
-#home {
-	background-image: url("/img/img-home.jpg");
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	height: 100vh;
+#navbarNav li {
+	font-weight: bold;
 }
 
-img.img-insert {
-	position: absolute;
-	width: auto;
-	height: 500px;
-	top: 280px;
-	left: 600px;
+/* Home */
+
+#home {
+	background-image: url("../img/banner.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
 }
 
 .heading {
 	position: relative;
-	top: 770px;
+	top: 40rem;
+}
+
+.heading h1 {
+	font-size: 2rem;
+}
+
+.heading p {
+	font-size: 1rem;
 }
 
 .background {
@@ -89,11 +106,8 @@ img.img-insert {
 }
 
 /* Media queries */
-
-/* `xs` returns only a ruleset and no media query */
-
-/* `sm` applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+	/* Home */
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
@@ -107,7 +121,7 @@ img.img-insert {
 	/* Descriptions */
 
 	#description .icons {
-		font-size: 1.9rem;
+		font-size: 1.5rem;
 	}
 
 	#description h1 {
@@ -116,20 +130,19 @@ img.img-insert {
 
 	/* Services */
 
-	.bd-services {
-		margin: 0 auto;
-		width: 31.25rem;
-	}
-
 	#services .iconify {
-		font-size: 1rem;
+		font-size: 2.5rem;
 	}
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 
 @media (max-width: 1199.98px) {
-	/* Descriptions */
+	/* Home */
+	.heading {
+		top: 35em;
+	}
+
 	.background h1 {
 		font-size: 2.25rem;
 	}
@@ -147,19 +160,7 @@ img.img-insert {
 /* `xxl` applies to x-large devices (large desktops, less than 1400px) */
 
 @media (max-width: 1399.98px) {
-	#home {
-		height: 100vh;
-	}
-
-	img.img-insert {
-		height: 31rem;
-		top: 12rem;
-		left: 28rem;
-	}
-
-	.heading {
-		top: 42rem;
-	}
+	/* Home */
 
 	/* Descriptions */
 
