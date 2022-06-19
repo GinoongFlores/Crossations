@@ -356,6 +356,7 @@ footer .img-logo {
 	}
 
 	/* Products & Services, & Pricing*/
+
 	#services .headers p,
 	#pricing .headers p {
 		text-align: justify;
@@ -364,6 +365,13 @@ footer .img-logo {
 	/* Pricing */
 	#pricing p {
 		font-size: 1rem;
+	}
+
+	/* About us */
+
+	.about-company p,
+	.investors p {
+		text-align: justify;
 	}
 
 	/* minimize p in every sections */
