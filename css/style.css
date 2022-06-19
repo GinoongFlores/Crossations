@@ -360,8 +360,9 @@ footer .img-logo {
 		font-size: 1rem;
 	}
 
-	/* Portfolio */
-	#portfolio .headers p {
+	/* minimize p in every sections */
+
+	.headers p {
 		font-size: 1rem;
 	}
 
