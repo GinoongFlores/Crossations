@@ -2,15 +2,8 @@
 
 * {
 	font-family: "Raleway", sans-serif;
-
-	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}
-
-body,
-html {
-	height: 100%;
 }
 
 :root {
@@ -32,54 +25,237 @@ html {
 /* Navbar */
 
 img.img-logo {
-	height: 60px;
-	width: auto;
+	width: 250px;
+	height: auto;
 }
 
-#navbarNav li {
+.navbar-nav li {
 	font-weight: bold;
+	padding: 0 0.4rem;
 }
 
 /* Home */
 
-#home {
-	background-image: url("../img/banner.png");
+/* #home {
+	background-image: url("../img/banner-img.png");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 100%;
-}
+} */
 
 .heading {
 	position: relative;
-	top: 40rem;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .heading h1 {
-	font-size: 2rem;
+	color: #507390ff;
+	text-shadow: 0px 3px 0px #ffffff, 0px 14px 10px rgba(0, 0, 0, 0.15),
+		0px 24px 2px rgba(0, 0, 0, 0.1), 0px 34px 30px rgba(0, 0, 0, 0.1);
+
+	font-weight: bolder;
+}
+
+.bd-image {
+	background-image: url("/img/banner-img.png");
+	height: 100vh;
+
+	overflow: hidden;
+	background-color: rgba(50, 70, 80, 0.7);
+	background-blend-mode: darken;
+
+	background-position: center;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 .heading p {
-	font-size: 1rem;
+	/* background-color: white; */
+
+	font-size: 1.5rem;
+
+	border-radius: 5px;
+	/* color: #507390ff; */
+	font-weight: bolder;
 }
 
 .background {
 	/* texts */
 	text-align: justify;
-
+	height: 100%;
 	/* background */
 	background: #ffffff;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
 }
 
+/* Descriptions */
+
 /* Services section */
+
+.bd-services {
+	background: #fdfcfc;
+	border-radius: 10px;
+}
+
+.bd-services h3 {
+	font-size: 25px;
+}
+
+.iconify {
+	font-size: 55px;
+}
+
+/* Pricing section */
+
+/* Pricing table styles */
+
+.pricingTable {
+	text-align: center;
+	background: #fff;
+	margin: 0 -15px;
+	box-shadow: 0 0 10px #ababab;
+	padding-bottom: 2.5rem;
+	border-radius: 10px;
+	color: #adb5bd;
+	transform: scale(1);
+	transition: all 0.5s ease 0s;
+	height: 100%;
+}
+
+.pricingTable:hover {
+	transform: scale(1.05);
+	z-index: 1;
+}
+
+.pricingTable .pricingTable-header {
+	padding: 2.5rem 0;
+	background: #f5f6f9;
+
+	/* Rounded corners */
+	border-radius: 10px 10px 50% 50%;
+	transition: all 0.5s ease 0s;
+}
+
+.pricingTable .month {
+	display: block;
+	font-size: 1.125rem;
+	color: #adb5bd;
+}
+
+.pricingTable:hover .month,
+.pricingTable:hover .price-value,
+.pricingTable:hover .pricingTable-header i {
+	color: #fff;
+}
+
+.pricingTable .pricing-content ul {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 1.875rem;
+}
+
+.pricingTable .pricing-content ul li {
+	line-height: 1.875rem;
+	color: #6c757d;
+}
+
+.pricingTable-quote a {
+	text-decoration: none;
+}
+
+.pricingTable.medium:hover .price-value,
+.pricingTable.enterprise:hover .price-value {
+	color: #fff;
+}
+
+/* Small Company */
+
+.pricingTable:hover .pricingTable-header {
+	background: #e02d4e;
+}
+
+.pricingTable .price-value {
+	font-size: 2.188rem;
+	color: #e02d4e;
+	transition: all 0.5s ease 0s;
+}
+
+.pricingTable .legacy {
+	font-size: 1.5rem;
+	color: #e02d4e;
+	margin-bottom: 20px;
+	text-transform: capitalize;
+}
+
+.pricingTable .pricingTable-quote a {
+	display: inline-block;
+	font-size: 1rem;
+	color: #fff;
+	padding: 10px 35px;
+	border-radius: 20px;
+	background: #e02d4e;
+	text-transform: uppercase;
+	transition: all 0.3s ease 0s;
+}
+
+.pricingTable .pricingTable-quote a:hover {
+	box-shadow: 0 0 10px #e02d4e;
+}
+
+/* Medium-Sized Business */
+
+.pricingTable.medium .legacy,
+.pricingTable.medium .price-value {
+	color: #4b2de0;
+}
+
+.pricingTable.medium .pricingTable-quote a,
+.pricingTable.medium:hover .pricingTable-header {
+	background-color: #4b2de0;
+}
+
+.pricingTable.medium .pricingTable-quote a:hover {
+	box-shadow: 0 0 10px #4b2de0;
+}
+
+/* Enterprise-Level Company */
+
+.pricingTable.enterprise .legacy,
+.pricingTable.enterprise .price-value {
+	color: #4fb286;
+}
+
+.pricingTable.enterprise .pricingTable-quote a,
+.pricingTable.enterprise:hover .pricingTable-header {
+	background-color: #4fb286;
+}
+
+.pricingTable.enterprise .pricingTable-quote a:hover {
+	box-shadow: 0 0 10px #4fb286;
+}
+
+/* Portfolio */
 
 /* Margin-top increase */
 
 #description,
-#services {
+#services,
+#pricing,
+#portfolio,
+#about-us,
+#team {
 	padding: 6.25rem 0;
+}
+
+#footer {
+	padding: 2.25rem 0;
+}
+
+.headers {
+	padding-bottom: 2rem;
 }
 
 /* Background colors */
@@ -92,33 +268,151 @@ img.img-logo {
 	background-color: #00b4d8;
 }
 
-.bd-services {
-	background: #fdfcfc;
-	border-radius: 10px;
+#pricing {
+	background-color: #0096c7;
 }
 
-.bd-services h3 {
-	font-size: 25px;
+#portfolio {
+	background-color: #0077b6;
 }
 
-.iconify {
-	font-size: 60px;
+#about-us {
+	background-color: #023e8a;
+}
+
+#footer {
+	background-color: #03045e;
+}
+
+/* About-us */
+
+/* Team social icon size */
+
+.btn-group a i {
+	font-size: 1.7rem;
+}
+
+/* Team */
+.card {
+	border-width: 0 !important;
+}
+
+/* Icons */
+
+.fa-facebook {
+	color: #3b5998;
+}
+
+.fa-Linkedin {
+	color: #0a66c2;
+}
+
+.fa-Linkedin {
+	color: #0a66c2;
+}
+
+/* Footer */
+
+footer .img-logo {
+	width: 200px;
+	height: auto;
+}
+
+.footer-logo {
+	margin-right: 5rem;
+}
+
+#footer ul li {
+	font-size: 0.9rem;
+}
+
+.services ul {
+	margin-left: 2rem;
+}
+
+#footer .nav-item .nav-link {
+	color: white;
+}
+
+#footer .nav-item .nav-link:hover {
+	color: var(--bs-blue);
+}
+
+#footer li .fab {
+	font-size: 1.375rem;
+}
+
+#footer li .fab {
+	color: #699bf7;
 }
 
 /* Media queries */
+
 @media (max-width: 575.98px) {
 	/* Home */
+
+	.heading .display-1.sm-size {
+		font-size: 2.5rem;
+	}
+
+	/* Pricing */
+	#pricing p {
+		font-size: 1rem;
+	}
+
+	/* Portfolio */
+	#portfolio .headers p {
+		font-size: 1rem;
+	}
+
+	/* Footer */
+
+	#footer li .fab {
+		font-size: 1rem;
+	}
 }
 
 /* `md` applies to small devices (landscape phones, less than 768px) */
 
 @media (max-width: 767.98px) {
+	/* Home */
+
+	.heading .display-1 {
+		font-size: 2.5rem;
+	}
+
+	.heading .lead.sm-size {
+		font-size: 0.8rem;
+	}
+
+	/* Portfolio */
+
+	/* About-us */
+
+	#about-us .about-img {
+		max-width: 300px;
+		height: auto;
+	}
+
+	/* Footer */
+
+	#footer li .fab {
+		font-size: 1.2rem;
+	}
 }
 
 /* `lg` applies to medium devices (tablets, less than 992px) */
 
 @media (max-width: 991.98px) {
 	/* Descriptions */
+
+	.heading .display-1 {
+		font-size: 3rem;
+	}
+
+	.heading .lead {
+		font-size: 1rem;
+	}
 
 	#description .icons {
 		font-size: 1.5rem;
@@ -133,15 +427,45 @@ img.img-logo {
 	#services .iconify {
 		font-size: 2.5rem;
 	}
+
+	/* Portfolio */
+
+	/* Footer */
+
+	footer {
+		text-align: center;
+	}
+
+	footer p {
+		font-size: 0.8rem;
+	}
+
+	footer h5 {
+		font-size: 1rem;
+	}
+
+	footer .nav .nav-item .nav-link {
+		font-size: 0.7rem;
+	}
+
+	footer .icons {
+		width: 1rem;
+		height: auto;
+	}
+
+	.footer-logo {
+		margin-right: 3rem;
+	}
+
+	.services ul {
+		margin-left: 1rem;
+	}
 }
 
 /* `xl` applies to large devices (desktops, less than 1200px) */
 
 @media (max-width: 1199.98px) {
 	/* Home */
-	.heading {
-		top: 35em;
-	}
 
 	.background h1 {
 		font-size: 2.25rem;
